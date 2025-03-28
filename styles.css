@@ -92,6 +92,7 @@ body {
   line-height: 1.4;
   overflow-x: hidden;
   font-family: "Inter";
+  background: #fbf4f0;
 }
 
 li {
@@ -135,10 +136,15 @@ h6 {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.6875rem 2.1875rem;
+  padding: 1rem 2.1875rem;
   background: #efad18;
 }
 
@@ -172,12 +178,24 @@ h6 {
 
 .header {
   padding: 1.875rem;
+  margin-top: 4.5rem;
 }
 
 .header__container {
-  max-width: 53.75rem;
+  max-width: 90%;
   text-align: center;
   margin-inline: auto;
+}
+
+.header__image {
+  margin-inline: auto;
+}
+
+@media (min-width: 1400px) {
+  .header__image {
+    margin-inline: auto;
+    height: 600px;
+  }
 }
 
 .header__title {
@@ -217,6 +235,14 @@ h6 {
 .showcase__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.showcase__map {
+  margin-top: 10px;
+  height: 80%;
+  width: 100%;
 }
 
 .showcase__image {
@@ -230,6 +256,11 @@ h6 {
 .showcase__content {
   display: flex;
   gap: 1.25rem;
+  width: 100%;
+}
+
+.showcase__content a {
+  text-decoration: none;
 }
 
 .showcase__content h2 {
@@ -275,13 +306,23 @@ h6 {
 
 .cause-header {
   padding: 2rem 1rem;
+  margin-top: 3rem;
+  background: #fbf4f0;
 }
 
 .cause-header__container {
   display: grid;
   grid-template-columns: 30% auto 26%;
   align-items: center;
-  max-width: 80rem;
+  max-width: 90%;
+  margin-inline: auto;
+}
+
+.cause-header__image {
+  text-align: center;
+}
+
+.cause-header__image img {
   margin-inline: auto;
 }
 
@@ -308,6 +349,12 @@ h6 {
   padding: 0.6875rem 1.25rem;
   text-align: center;
   border-radius: 0.1875rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.cause-header__content a:hover {
+  background: #7ebfa0;
+  color: #222d35;
 }
 
 .cause-header__logos {
@@ -320,6 +367,7 @@ h6 {
 .load-and-visible {
   padding-top: 10rem;
   padding-inline: 1rem;
+  background: #fbf4f0;
 }
 
 .load-and-visible__container {
@@ -352,6 +400,28 @@ h6 {
   line-height: 1.7;
   letter-spacing: 0%;
   color: #0b333c;
+}
+
+@media (min-width: 1400px) {
+  .cause-header__image img {
+    margin-inline: auto;
+    height: 750px;
+    scale: 1.1;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .cause-header__content p {
+    font-size: 1.25rem;
+  }
+
+  .cause-header__logos img {
+    scale: 1.5;
+  }
+
+  .cause-header__container {
+    max-width: 95%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -494,7 +564,7 @@ h6 {
 
   .showcase__container {
     grid-template-columns: 1fr;
-    gap: 20rem;
+    gap: 3rem;
   }
 
   .showcase__content {
@@ -586,5 +656,11 @@ h6 {
 
   .load-and-visible__image {
     margin-bottom: -2rem;
+  }
+
+  .showcase__map {
+    height: 300px;
+    padding-inline: 20px;
+    margin-top: 20px;
   }
 }

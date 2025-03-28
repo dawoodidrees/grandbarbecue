@@ -14,7 +14,7 @@
   <body>
     <nav class="navbar">
       <div class="navbar__logo">
-        <img src="/images/Logo.svg" alt="Grant Barbecue" />
+        <img src="/images/Logo.svg" alt="Grant Barbecue" style="opacity: 0" />
       </div>
       <div class="navbar__links">
         <ul>
@@ -50,11 +50,27 @@
 
     <section class="showcase">
       <div class="showcase__container">
-        <div class="showcase__content">
-          <img src="/images/location-Icon.svg" alt="Location Icon" width="50" height="50" />
-          <div>
-            <h2>Woodley Gardens Park</h2>
-            <p>900 Nelson St, Rockville, MD 20850</p>
+        <div>
+          <a target="_blank" href="https://ul.waze.com/ul?venue_id=185336199.1853558597.970519&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
+            <div class="showcase__content">
+              <img src="/images/location-Icon.svg" alt="Location Icon" width="50" height="50" />
+              <div>
+                <h2>Woodley Gardens Park</h2>
+                <p>900 Nelson St, Rockville, MD 20850</p>
+              </div>
+            </div>
+          </a>
+
+          <div class="showcase__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6193.286834276284!2d-77.17517602322687!3d39.09181927168326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cd42168bdbbd%3A0x7915fbda477a64fc!2sWoodley%20Gardens%20Park!5e0!3m2!1sen!2sus!4v1741491593122!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
         <div class="showcase__image">
